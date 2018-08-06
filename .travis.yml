@@ -1,0 +1,7 @@
+language: python
+python:
+  - "3.4"
+install:
+  - pip install -r requirements-test.txt -r requirements.txt
+script:
+  - for test_file in tests/*.py; do python "$test_file"; done
